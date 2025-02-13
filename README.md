@@ -20,6 +20,9 @@ This project provides health insurance providers and policy makers with data-dri
 The dataset used in this project, insurance.csv, was obtained from Kaggle [Insurance Dataset on Kaggle](https://www.kaggle.com/datasets/mirichoi0218/insurance/data)
 . Kaggle is a collaborative platform for data scientists and analysts, and this particular dataset is linked to a learning dataset provided on GitHub. According to the information available on Kaggle, the dataset is synthetically generated and was last updated approximately seven years ago. Additionally, no specific timeframe is provided for the data. As a result, this dataset should not be considered reliable for real-world health policy decisions but can still serve as a useful tool for exploratory analysis and methodological demonstrations. 
 
+Data Cleaning 
+
+
 ## Limitations  
 This dataset is **synthetic** and lacks a defined timeframe, limiting its reliability for real-world policy decisions. Insights should be interpreted cautiously, as potential biases in data generation may lead to misleading conclusions without validation against real-world data.  
 
