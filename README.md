@@ -20,16 +20,26 @@ This project provides health insurance providers and policy makers with data-dri
 The dataset used in this project, insurance.csv, was obtained from Kaggle [Insurance Dataset on Kaggle](https://www.kaggle.com/datasets/mirichoi0218/insurance/data)
 . Kaggle is a collaborative platform for data scientists and analysts, and this particular dataset is linked to a learning dataset provided on GitHub. According to the information available on Kaggle, the dataset is synthetically generated and was last updated approximately seven years ago. Additionally, no specific timeframe is provided for the data. As a result, this dataset should not be considered reliable for real-world health policy decisions but can still serve as a useful tool for exploratory analysis and methodological demonstrations. 
 
-Data Cleaning 
+**Data Description**
+The dataset consists of 1,338 rows with seven variables, providing insights into how health and location factors may impact health insurance expenses:  
+- age: Age of the primary beneficiary.  
+- sex: Gender of the insurance contractor (female or male).  
+- BMI: Body mass index, indicating whether body weight is relatively high or low compared to height.  
+  - An objective index of body weight (kg/m²), calculated using the height-to-weight ratio. The ideal range is 18.5 to 24.9.  
+- children: Number of dependents covered by health insurance.  
+- smoker: Smoking status (yes or no).  
+- region: Beneficiary's residential area in the U.S. (Northeast, Southeast, Southwest, Northwest).  
+- charges: Individual medical costs billed by health insurance.  
 
+**Data Wrangling & Cleaning** 
+-	Data was checked for missing values, duplicates, mixed-type data, and correct data type. No deviations were found. 
+- state: To approximate **state-level data**, a new column was added by randomly assigning states within their ([**CDC-defined regions**](https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf)). While this preserves broad regional trends, it does not reflect **state-specific healthcare policies, costs, or demographics**, making **state-level comparisons unreliable**.  
 
 ## Limitations  
 This dataset is **synthetic** and lacks a defined timeframe, limiting its reliability for real-world policy decisions. Insights should be interpreted cautiously, as potential biases in data generation may lead to misleading conclusions without validation against real-world data.  
 
 - **BMI** is an oversimplified health indicator, as it does not account for body composition or physical fitness.  
 - **Smoking status** is represented as a binary variable, which does not capture smoking frequency or intensity but serves as a simplified measure for analysis.  
-
-To approximate **state-level data**, a new column was added by randomly assigning states within their **CDC-defined regions** ([source](https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf)). While this preserves broad regional trends, it does not reflect **state-specific healthcare policies, costs, or demographics**, making **state-level comparisons unreliable**.  
 
 ## Ethical Considerations 
 - While the dataset does not contain personally identifiable information (PII), there remains a risk of **bias** that could contribute to **discrimination** in insurance pricing or policy decisions. Health insurers must ensure that predictive models do not disproportionately impact vulnerable populations or reinforce existing disparities. Transparency in data use and adherence to ethical AI practices are critical to maintaining fairness and public trust in insurance decision-making.  
